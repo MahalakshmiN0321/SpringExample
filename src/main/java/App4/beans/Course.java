@@ -32,9 +32,9 @@ public class Course {
     public void getCourseDetails(){
         System.out.println("Course.java Details");
         System.out.println("**************");
-        System.out.println("Course.java Id:"+cid);
-        System.out.println("Course.java Name:"+cname);
-        System.out.println("Course.java Cost:"+ccost);
+        System.out.println("Course Id:"+cid);
+        System.out.println("Course Name:"+cname);
+        System.out.println("Course Cost:"+ccost);
     }
 
 }

@@ -17,7 +17,7 @@ public class App {
         User user=(User) context.getBean("userBean");
         user.getUserDetails();
         System.out.println();
-        UserValidator userValidator=(UserValidator) context.getBean("userValidator");
+        UserValidator userValidator=(UserValidator) context.getBean("UserValidator");
         Map<String,String>  map=new HashMap<>();
         MapBindingResult mapBindingResult=new MapBindingResult(map,"App5.beans.User");
         userValidator.validate(user,mapBindingResult);

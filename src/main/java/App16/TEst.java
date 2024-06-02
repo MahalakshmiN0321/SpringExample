@@ -18,6 +18,9 @@ public class TEst {
         String status=employeeDao.add(employee);
         System.out.println(status);
 */
+
+
+        /*
         Employee emp = employeeDao.search(111);
         if (emp == null) {
             System.out.println("Employee not Existed");
@@ -29,6 +32,8 @@ public class TEst {
             System.out.println("Employee Salary:" + emp.getEsalary());
             System.out.println("Employee Address:" + emp.getEaddr());
         }
+*/
+
 
         /*
         Employee employee1=new Employee();
@@ -41,8 +46,12 @@ public class TEst {
     }
          */
 
+
+        /*
         String status = employeeDao.delete(111);
         System.out.println(status);
+
+         */
     }
 }
 

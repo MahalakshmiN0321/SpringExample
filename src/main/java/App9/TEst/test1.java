@@ -9,7 +9,7 @@ public class test1 {
         GenericXmlApplicationContext context=new GenericXmlApplicationContext();
         context.load("applicationContext.xml");
         context.refresh();
-        DbBean dbBean=(DbBean) context.getBean("bean");
+        DbBean dbBean=(DbBean) context.getBean("dbBean");
         dbBean.getdbdetails();
     }
 }

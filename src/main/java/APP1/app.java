@@ -1,13 +1,13 @@
-package App4.test;
+package APP1;
 
-import App4.beans.Course;
+import APP1.beans.Student;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class App {
+public class app {
     public static void main(String[] args) {
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-        Course course=(Course) context.getBean("courseBean");
-        course.getCourseDetails();
+        Student student=(Student) context.getBean("studentBean");
+        student.getStudentDetails();
     }
 }

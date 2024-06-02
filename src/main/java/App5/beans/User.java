@@ -46,6 +46,7 @@ public class User {
     public void setUmobile(String umobile) {
         this.umobile = umobile;
     }
+
     public void getUserDetails(){
         System.out.println("User Details");
         System.out.println("************");

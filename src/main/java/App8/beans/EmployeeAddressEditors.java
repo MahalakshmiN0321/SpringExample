@@ -7,10 +7,10 @@ public class EmployeeAddressEditors extends PropertyEditorSupport {     //proper
     @Override
     public void setAsText(String text) throws IllegalArgumentException {
         String[] str=text.split("-");
-        EmployeeAddress employeeAddress=new EmployeeAddress();
-        employeeAddress.setHno(str[0]);
-        employeeAddress.setCity(str[1]);
-        employeeAddress.setStreetname(str[2]);
-        super.setValue(employeeAddress);
+        EmployeeAddress eaddress=new EmployeeAddress();
+        eaddress.setHno(str[0]);
+        eaddress.setStreetname(str[1]);
+        eaddress.setCity(str[2]);
+        super.setValue(eaddress);
     }
 }

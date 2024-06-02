@@ -5,7 +5,6 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-
 import java.util.Properties;
 
 public class UserValidator implements Validator {

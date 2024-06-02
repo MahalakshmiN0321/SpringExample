@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App8 {
     public static void main(String[] args) {
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-        Employee employee=(Employee) context.getBean("employee");
+        Employee employee=(Employee) context.getBean("employeeBean");
         employee.getEmployeeDetails();
     }
 }

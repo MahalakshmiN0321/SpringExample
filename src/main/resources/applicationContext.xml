@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--
+    <bean id="courseBean1" class="APP1.beans.Course" autowire-candidate="true">
+        <property name="courseId" value="111"/>
+        <property name="courseName" value="python"/>
+        <property name="courseCost" value="3000"/>
+    </bean>
+
+    <bean id="courseBean2" class="APP1.beans.Course" autowire-candidate="false">
+        <property name="courseId" value="111"/>
+        <property name="courseName" value="JAVA"/>
+        <property name="courseCost" value="4000"/>
+    </bean>
+
+    <bean id="studentBean" class="APP1.beans.Student" autowire="byType">
+        <property name="studentId" value="101"/>
+        <property name="studentName" value="maha"/>
+        <property name="studentAge" value="23"/>
+        <property name="course" ref="courseBean2"/>
+    </bean>
+-->
+
+
+<!--
+    <bean id="courseBean" class="APP2.beans.Course" scope="singleton">
+        <property name="courseId" value="111"/>
+        <property name="courseName" value="python"/>
+        <property name="courseCost" value="3000"/>
+    </bean>
+
+    <bean id="studentBean1" class="APP2.beans.Student" scope="prototype">
+         <property name="studentId" value="102"/>
+         <property name="studentName" value="sugan"/>
+         <property name="studentAge" value="24"/>
+         <property name="course" ref="courseBean"/>
+    </bean>
+
+-->
+
+
+<!--
+        <bean id="savingsAccount" class="App3.beans.SavingsAccount" />
+        <bean id="currentAccount" class="App3.beans.CurrentAccount" />
+        <bean id="savingsAccountFactory" class="App3.factory.AccountFactory">
+            <lookup-method name="getAccount" bean="savingsAccount"/>
+        </bean>
+        <bean id="currentAccountFactory" class="App3.factory.AccountFactory">
+            <lookup-method name="getAccount" bean="currentAccount"/>
+        </bean>
+-->
+
+
+
+<!--
+        <bean id="newImpl" class="App4.beans.MethodReplacerImpl"/>
+        <bean id="courseBean" class="App4.beans.Course">
+            <property name="cid" value="111"/>
+            <property name="cname" value="Java"/>
+            <property name="ccost" value="10000"/>
+            <replaced-method name="getCourseDetails" replacer="newImpl"/>
+        </bean>
+        -->
+
+
+<!--
+    <bean id="userBean" class="App5.beans.User">
+        <property name="uname" value=""/>
+        <property name="upwd" value=""/>
+        <property name="uage" value="0"/>
+        <property name="uemail" value=""/>
+        <property name="umobile" value=""/>
+    </bean>
+    <bean id="UserValidator" class="App5.Validator.UserValidator">
+        <property name="resource" value="abc.properties"/>
+    </bean>
+-->
+
+
+<!--
+    <bean id="account" class="App6.beans.Account">
+        <property name="publisher" ref="accountEventPublisher"/>
+    </bean>
+    <bean id="accountEventHandler"
+          class="App6.Handler.AccountEventHandler"/>
+    <bean id="accountEventPublisher"
+          class="App6.Publisher.AccountEventPublisher"/>
+-->
+
+
+<!--
+    <bean id="employeeBean" class="App8.beans.Employee">
+        <property name="eid" value="C-111"/>
+        <property name="ename" value="pavi"/>
+        <property name="esalary" value="50000.0"/>
+        <property name="eaddress" value="16B-CPS Nagar-Chennai"/>
+    </bean>
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="App8.beans.EmployeeAddress"
+                       value="App8.beans.EmployeeAddressEditors"/>
+            </map>
+        </property>
+    </bean>
+-->
+
+    <bean id="dbBean" class="App9.beans.DbBean">
+        <property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+        <property name="driverUrl" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+        <property name="dbUserName" value="system"/>
+        <property name="dbPassword" value="durga"/>
+    </bean>
+
+<!--
+    <bean id="EmployeeDao" class="App16.EmployeeDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+        <property name="username" value="system"/>
+        <property name="password" value="durga"/>
+    </bean>
+
+-->
+
+<!--
+    <bean id="StudentDao" class="App17.StudentDaoImpl">
+        <property name="namedParameterJdbcTemplate" ref="namedParameterJdbcTemplate"/>
+    </bean>
+    <bean id="namedParameterJdbcTemplate"
+          class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+    <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+    <property name="username" value="system"/>
+    <property name="password" value="durga"/>
+    </bean>
+
+-->
+
+<!--
+    <bean id="employeeDao" class="App20.EmployeeDaoImpl1">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+    <context:property-placeholder location="jdbc.properties"/> -->
+
+
+<!--
+    <bean id="employeeDao" class="App22.EmployeeDaoImpl">
+        <property name="simpleJdbcTemplate" ref="simpleJdbcTemplate"/>
+    </bean>
+    <bean id="simpleJdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
+
+        <constructor-arg ref="dataSource"/>
+    </bean>
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+        <property name="username" value="system"/>
+        <property name="password" value="durga"/>
+    </bean>
+-->
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
